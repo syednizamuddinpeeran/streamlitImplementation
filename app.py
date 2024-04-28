@@ -9,5 +9,6 @@ st.write("This is a st.wrte command. we can pass fucntions that return stuff her
 def sampleStringreturn():
     return f"This string comes from function {time.localtime()}" 
 st.write(sampleStringreturn())
+
 st.write("This *text* is italised by enclosing it in astrics (*)")
 st.write(st.write)
