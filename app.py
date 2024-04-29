@@ -1,21 +1,13 @@
-import streamlit as st
-import time
+import sys
+from main import app
+from streamlit import runtime
+from streamlit.web import cli
 
-
-from dataElements import dataElements
-from layouts import layouts, sidebar
-from setup import setup
-from textElements import textElements
-
-st.title("Welcome to the streamlit demo + helper")
-setup()
-sidebar()
-TextElements,DataElements,MultimediaElements,ChatSpecific,StructuralElements = st.tabs(["Text Elements","Data elements","multimedia elements","Chat specific","Structural Elements"])
-
-            
-with TextElements:    
-    textElements()
-with StructuralElements:
-    layouts()
-with DataElements:
-    dataElements()
+def main():
+    app()
+if __name__ == '__main__':
+    if runtime.exists():
+        main()
+    else:
+        sys.argv = ["streamlit", "run", sys.argv[0]]
+        sys.exit(cli.main())
