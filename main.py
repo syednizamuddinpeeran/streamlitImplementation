@@ -7,7 +7,7 @@ from layouts import layouts, sidebar
 from setup import setup
 from textElements import textElements
 def app():
-    st.title("Welcome to the streamlit demo + helper")
+    st.title("Welcome to the Streamlit demo + helper")
     setup()
     sidebar()
     TextElements,DataElements,MultimediaElements,ChatSpecific,StructuralElements = st.tabs(["Text Elements","Data elements","multimedia elements","Chat specific","Structural Elements"])
