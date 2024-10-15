@@ -22,3 +22,4 @@ def app():
 
 if __name__ == '__main__' : 
     app()
+    st.set_option('server.enableCORS',True)
